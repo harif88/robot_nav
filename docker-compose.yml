@@ -1,0 +1,10 @@
+
+  services:
+    app:
+      image: ruby:3.3-slim
+      working_dir: /app
+      volumes:
+        - .:/app
+      stdin_open: true
+      tty: true
+      command: sh -c "bundle install && ruby bin/robot_nav"
